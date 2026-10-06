@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Образование умерло — почему диплом больше не гарантирует работу</title>
+<meta name="description" content="Разрыв между образованием и рынком труда. Цифры, истории, что делать.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+
+<!-- ПРЕЛОАДЕР -->
+<div class="preloader" id="preloader">
+  <div class="preloader__inner">
+    <div class="preloader__counter"><span id="preCount">0</span></div>
+    <div class="preloader__text" id="preText">загрузка рынка труда</div>
+  </div>
+</div>
+
+<!-- ФОН -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-noise" aria-hidden="true"></div>
+
+<!-- HERO -->
+<header class="hero" id="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+
+  <div class="hero__top">
+    <div class="brand">Образование умерло</div>
+    <div class="brand brand--right">2026 · рынок труда</div>
+  </div>
+
+  <div class="hero__main">
+    <h1 class="hero__title">
+      <span class="hero__line">Диплом</span>
+      <span class="hero__line hero__line--outline">больше не</span>
+      <span class="hero__line hero__line--accent">гарантирует<span class="hero__dot">.</span></span>
+    </h1>
+
+    <div class="hero__aside">
+      <p class="hero__sub">
+        Разрыв между тем, чему учат, и тем, что нужно рынку,
+        стал пропастью. Мы собрали цифры, которые это доказывают.
+      </p>
+      <div class="hero__cta">
+        <a href="#numbers" class="btn btn--primary" data-scroll>Смотреть цифры</a>
+        <a href="#actions" class="btn btn--ghost" data-scroll>Что делать</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__stat">
+    <div class="hero__stat-num" data-parallax-num>63</div>
+    <div class="hero__stat-suffix">%</div>
+    <div class="hero__stat-label">
+      выпускников 9-х классов ушли в колледжи — рекорд за 50 лет
+    </div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <span>scroll</span>
+    <span class="scroll-hint__line"></span>
+  </div>
+</header>
+
+<!-- 01 ПРОБЛЕМА -->
+<section class="section problem" id="problem">
+  <div class="section__head">
+    <div class="section__tag" data-reveal>
+      <span class="section__tag-num">01</span>
+      <span class="section__tag-line"></span>
+      <span>Проблема</span>
+    </div>
+    <h2 class="section__title" data-reveal>
+      Система учит вчерашнему.<br>
+      Рынок требует завтрашнего.
+    </h2>
+  </div>
+
+  <div class="problem__list">
+    <article class="problem__row" data-reveal>
+      <div class="problem__num">01</div>
+      <div class="problem__body">
+        <h3 class="problem__title">Диплом ≠ навык</h3>
+        <p class="problem__text">ВУЗ учит 5 лет тому, что устаревает за 2. Программа не успевает за индустрией.</p>
+      </div>
+      <div class="problem__metric">5 / 2</div>
+    </article>
+
+    <article class="problem__row" data-reveal>
+      <div class="problem__num">02</div>
+      <div class="problem__body">
+        <h3 class="problem__title">Работодатель не верит</h3>
+        <p class="problem__text">93% компаний не находят нужную квалификацию. Диплом перестал быть сигналом.</p>
+      </div>
+      <div class="problem__metric">93%</div>
+    </article>
+
+    <article class="problem__row" data-reveal>
+      <div class="problem__num">03</div>
+      <div class="problem__body">
+        <h3 class="problem__title">Рынок перевернулся</h3>
+        <p class="problem__text">28 вакансий на одного безработного с рабочей профессией. Спрос сместился.</p>
+      </div>
+      <div class="problem__metric">28×</div>
+    </article>
+
+    <article class="problem__row" data-reveal>
+      <div class="problem__num">04</div>
+      <div class="problem__body">
+        <h3 class="problem__title">Специальность ≠ работа</h3>
+        <p class="problem__text">40% выпускников СПО работают не по специальности. Диплом лежит на полке.</p>
+      </div>
+      <div class="problem__metric">40%</div>
+    </article>
+  </div>
+</section>
+
+<!-- 02 ЦИФРЫ — PIN -->
+<section class="numbers" id="numbers">
+  <div class="numbers__pin">
+    <div class="numbers__stage">
+
+      <div class="numbers__slide is-active" data-num-slide>
+        <div class="numbers__index">01 / 05</div>
+        <div class="numbers__value"><span data-count="63">0</span><span class="numbers__unit">%</span></div>
+        <div class="numbers__caption">выпускников 9-х классов ушли в колледжи —<br>рекорд за 50 лет</div>
+      </div>
+
+      <div class="numbers__slide" data-num-slide>
+        <div class="numbers__index">02 / 05</div>
+        <div class="numbers__value"><span data-count="1.3" data-decimals="1">0</span><span class="numbers__unit">млн</span></div>
+        <div class="numbers__caption">человек зачислено в СПО<br>в 2025 году</div>
+      </div>
+
+      <div class="numbers__slide" data-num-slide>
+        <div class="numbers__index">03 / 05</div>
+        <div class="numbers__value"><span data-count="93">0</span><span class="numbers__unit">%</span></div>
+        <div class="numbers__caption">работодателей столкнулись<br>с дефицитом квалификации</div>
+      </div>
+
+      <div class="numbers__slide" data-num-slide>
+        <div class="numbers__index">04 / 05</div>
+        <div class="numbers__value"><span data-count="28">0</span><span class="numbers__unit">×</span></div>
+        <div class="numbers__caption">вакансий на одного безработного<br>с рабочей профессией</div>
+      </div>
+
+      <div class="numbers__slide" data-num-slide>
+        <div class="numbers__index">05 / 05</div>
+        <div class="numbers__value"><span data-count="40">0</span><span class="numbers__unit">%</span></div>
+        <div class="numbers__caption">выпускников СПО работают<br>не по специальности</div>
+      </div>
+
+      <div class="numbers__progress" aria-hidden="true">
+        <span class="numbers__progress-bar" id="numProgress"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 ПОКОЛЕНИЯ -->
+<section class="section generations" id="generations">
+  <div class="section__head">
+    <div class="section__tag" data-reveal>
+      <span class="section__tag-num">03</span>
+      <span class="section__tag-line"></span>
+      <span>Поколения</span>
+    </div>
+    <h2 class="section__title" data-reveal>
+      Три поколения —<br>три отношения к диплому.
+    </h2>
+  </div>
+
+  <div class="gens">
+    <article class="gen" data-reveal>
+      <div class="gen__letter">X</div>
+      <div class="gen__years">1965 — 1980</div>
+      <p class="gen__text">Диплом = путёвка в жизнь. Без него — никуда. Одна профессия на всю жизнь.</p>
+    </article>
+
+    <article class="gen" data-reveal>
+      <div class="gen__letter">Y</div>
+      <div class="gen__years">1981 — 1996</div>
+      <p class="gen__text">Диплом = формальность. Главное — опыт и связи. Смена работы — норма.</p>
+    </article>
+
+    <article class="gen" data-reveal>
+      <div class="gen__letter">Z</div>
+      <div class="gen__years">1997 — 2012</div>
+      <p class="gen__text">Диплом = опция. Главное — навык и портфолио. Учиться можно где угодно.</p>
+    </article>
+  </div>
+</section>
+
+<!-- 04 КЕЙСЫ -->
+<section class="section cases" id="cases">
+  <div class="section__head">
+    <div class="section__tag" data-reveal>
+      <span class="section__tag-num">04</span>
+      <span class="section__tag-line"></span>
+      <span>Истории</span>
+    </div>
+    <h2 class="section__title" data-reveal>
+      Четыре человека,<br>которые уже поняли.
+    </h2>
+  </div>
+
+  <div class="cases__list">
+    <article class="case case--left" data-reveal>
+      <div class="case__meta">
+        <span class="case__num">01</span>
+        <span class="case__tag">СПО · рабочие профессии</span>
+      </div>
+      <blockquote class="case__quote">«Слесарь на заводе получает больше, чем юрист в офисе. Я выбрал завод.»</blockquote>
+      <div class="case__author">Дмитрий, 24 года · слесарь-инструментальщик</div>
+    </article>
+
+    <article class="case case--right" data-reveal>
+      <div class="case__meta">
+        <span class="case__num">02</span>
+        <span class="case__tag">Онлайн-курсы · IT</span>
+      </div>
+      <blockquote class="case__quote">«6 месяцев курсов дали мне больше, чем 5 лет университета. И работу дали.»</blockquote>
+      <div class="case__author">Алина, 27 лет · frontend-разработчик</div>
+    </article>
+
+    <article class="case case--left" data-reveal>
+      <div class="case__meta">
+        <span class="case__num">03</span>
+        <span class="case__tag">ВУЗ · смена профессии</span>
+      </div>
+      <blockquote class="case__quote">«Красный диплом, а работаю не по специальности. Зато счастлив.»</blockquote>
+      <div class="case__author">Сергей, 31 год · владелец кофейни</div>
+    </article>
+
+    <article class="case case--right" data-reveal>
+      <div class="case__meta">
+        <span class="case__num">04</span>
+        <span class="case__tag">Самообразование · креатив</span>
+      </div>
+      <blockquote class="case__quote">«Родители не поняли, но я был прав. Навык важнее корочки.»</blockquote>
+      <div class="case__author">Камила, 22 года · дизайнер интерьеров</div>
+    </article>
+  </div>
+</section>
+
+<!-- 05 ЧТО ДЕЛАТЬ -->
+<section class="section actions" id="actions">
+  <div class="section__head">
+    <div class="section__tag" data-reveal>
+      <span class="section__tag-num">05</span>
+      <span class="section__tag-line"></span>
+      <span>Что делать</span>
+    </div>
+    <h2 class="section__title" data-reveal>
+      Образование не умерло.<br>Умерла его монополия на успех.
+    </h2>
+  </div>
+
+  <div class="actions__grid">
+    <article class="action" data-reveal>
+      <div class="action__head">
+        <span class="action__num">01</span>
+        <h3 class="action__title">Молодёжи</h3>
+      </div>
+      <ul class="action__list">
+        <li>Собирай портфолио с первого курса</li>
+        <li>Учись тому, что спрашивают на собеседованиях, а не в билетах</li>
+        <li>Не бойся менять траекторию</li>
+      </ul>
+    </article>
+
+    <article class="action" data-reveal>
+      <div class="action__head">
+        <span class="action__num">02</span>
+        <h3 class="action__title">Родителям</h3>
+      </div>
+      <ul class="action__list">
+        <li>Слушай ребёнка, а не стереотип «нужен диплом»</li>
+        <li>Считай не годы обучения, а навыки и деньги</li>
+        <li>Рабочая профессия — не позор</li>
+      </ul>
+    </article>
+
+    <article class="action" data-reveal>
+      <div class="action__head">
+        <span class="action__num">03</span>
+        <h3 class="action__title">Системе</h3>
+      </div>
+      <ul class="action__list">
+        <li>Меняй программы быстрее, чем рынок</li>
+        <li>Связывай колледжи и вузы с работодателями</li>
+        <li>Учи навыку, а не пересказу учебника</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ФИНАЛ -->
+<footer class="final" id="final">
+  <div class="final__glow" aria-hidden="true"></div>
+
+  <div class="final__inner">
+    <div class="final__label" data-reveal>вопрос</div>
+    <h2 class="final__title" data-reveal>
+      А ты ещё<br>веришь<br>в диплом<span class="final__dot">?</span>
+    </h2>
+
+    <div class="final__cta">
+      <button class="btn btn--primary" id="shareBtn" type="button">Поделиться</button>
+      <button class="btn btn--ghost" id="topBtn" type="button">Наверх</button>
+    </div>
+  </div>
+
+  <div class="final__foot">
+    <span>сделано в 2026</span>
+    <span>лендинг-исследование</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

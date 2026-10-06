@@ -1,0 +1,161 @@
+/* RESET */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img, svg, video { display: block; max-width: 100%; height: auto; }
+button, input, textarea { font: inherit; color: inherit; background: none; border: none; outline: none; }
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+
+/* ПЕРЕМЕННЫЕ */
+:root {
+  --bg:           #0A0B0D;
+  --bg-2:         #101214;
+  --bg-3:         #171A1D;
+  --line:         rgba(255, 255, 255, 0.07);
+  --line-strong:  rgba(255, 255, 255, 0.14);
+
+  --fg:           #EDEFF1;
+  --fg-dim:       #85898E;
+  --fg-mute:      #4E5358;
+
+  --accent:       #C6FF3D;
+  --accent-dim:   #8FB82B;
+  --accent-glow:  rgba(198, 255, 61, 0.28);
+  --accent-soft:  rgba(198, 255, 61, 0.10);
+
+  --font-display: 'Unbounded', system-ui, sans-serif;
+  --font-text:    'Manrope', system-ui, sans-serif;
+
+  --fs-body:      clamp(1rem, 1.05vw, 1.1rem);
+
+  --container:    1400px;
+  --gutter:       clamp(1.5rem, 5vw, 4rem);
+  --section-y:    clamp(6rem, 14vw, 12rem);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* БАЗА */
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-text);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  font-weight: 400;
+}
+body { overflow-x: hidden; position: relative; }
+::selection { background: var(--accent); color: #000; }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--bg-3);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--accent-dim); }
+
+/* ТИПОГРАФИКА */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+p { color: var(--fg-dim); }
+
+/* КНОПКИ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.05rem 2rem;
+  font-family: var(--font-text);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 999px;
+  transition: transform 0.45s var(--ease), background 0.45s var(--ease),
+              color 0.45s var(--ease), box-shadow 0.45s var(--ease),
+              border-color 0.45s var(--ease);
+  will-change: transform;
+  white-space: nowrap;
+}
+.btn--primary {
+  background: var(--accent);
+  color: #06080A;
+}
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px -10px var(--accent-glow), 0 0 0 6px var(--accent-soft);
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--line-strong);
+}
+.btn--ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ФОНЫ */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 100px 100px;
+  mask-image: radial-gradient(ellipse at 50% 40%, #000 20%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 20%, transparent 80%);
+}
+.bg-noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ПРЕЛОАДЕР */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #060708;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.9s var(--ease), visibility 0.9s var(--ease);
+}
+.preloader.is-done { opacity: 0; visibility: hidden; }
+.preloader__inner { text-align: center; }
+.preloader__counter {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(4rem, 14vw, 11rem);
+  color: var(--accent);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+.preloader__text {
+  margin-top: 1.25rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.4em;
+  color: var(--fg-mute);
+  text-transform: uppercase;
+}
